@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Page</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="./style.css" class="href" />
+  </head>
+  <body>
+    <div class="container">
+      <h2 class="text-center mt-5">Admin Dashboard</h2>
+
+      <div class="row mt-4">
+        <div class="col-md-6">
+          <label for="sortOptions">Sort by Price:</label>
+          <select id="sortOptions" class="form-control">
+            <option value="asc">Ascending</option>
+            <option value="desc">Descending</option>
+          </select>
+        </div>
+        <div class="col-md-6">
+          <label for="priceFilter">Filter by Price Range:</label>
+          <input
+            type="range"
+            id="priceFilter"
+            class="form-control"
+            min="0"
+            max="100"
+            step="1"
+          />
+          <span id="priceRange" class="d-block text-center mt-2">0 - 100</span>
+        </div>
+      </div>
+
+      <div id="menu-items" class="mt-4">
+        <!-- Menu items will be displayed here -->
+      </div>
+
+      <form id="menuForm" class="mt-4">
+        <div class="form-group">
+          <label for="itemName">Item Name:</label>
+          <input type="text" class="form-control" id="itemName" required />
+        </div>
+        <div class="form-group">
+          <label for="itemPrice">Item Price:</label>
+          <input type="number" class="form-control" id="itemPrice" required />
+        </div>
+        <div class="form-group">
+          <label for="itemImageUrl">Item Image URL:</label>
+          <input type="url" class="form-control" id="itemImageUrl" required />
+        </div>
+        <button type="submit" class="btn btn-primary">Add Item</button>
+      </form>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="admin.js"></script>
+  </body>
+</html>
